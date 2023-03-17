@@ -134,11 +134,15 @@ def search_shoe():
 
 # This function should print value of each product.
 def value_per_item():
-    # Loop through each line of shoe_list and multiply quantity by cost.
+    # Create a list to store the values of each product.
+    list_of_values = []
     for line in shoe_list:
         shoe_value = int(line.get_quantity()) * float(line.get_cost())
-        # Print value of each shoe.
-        print(f'PRODUCT: {line.product} -- TOTAL VALUE OF: £{round((shoe_value), 2)}')
+        # Append the value of each shoe to the list as a separate row.
+        list_of_values.append([line.product, round(shoe_value, 2)])
+    # Use tabulate to print the values as a table.
+    # Use float format to ensure Total Cost is rounded to to 2DP (and avoid scientific notation in printed results).
+    print(tabulate(list_of_values, headers=['PRODUCT', 'TOTAL VALUE'], tablefmt='fancy_grid', floatfmt=".2f"))
 
 # This function find prodcut with highest quantity and place it for sale.
 def highest_qty():

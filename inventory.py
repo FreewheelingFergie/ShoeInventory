@@ -83,9 +83,9 @@ def view_all():
     # Ref - https://pypi.org/project/tabulate/
     list_of_values = []
     for line in shoe_list:
-        shoe_value = [line.country, line.code, line.product, line.cost, line.quantity]
+        shoe_value = [line.country, line.code, line.product, line.quantity, line.cost]
         list_of_values.append(shoe_value)
-    shoe_table = tabulate(list_of_values, headers = ['COUNTRY', 'CODE', 'PRODUCT', 'COST', 'QUANTITY'], tablefmt = 'fancy_grid')
+    shoe_table = tabulate(list_of_values, headers = ['COUNTRY', 'CODE', 'PRODUCT', 'QUANTITY', 'COST'], tablefmt = 'fancy_grid')
     print(shoe_table)
 
 # This function should allow user to increase stock of products with lowest quantity.

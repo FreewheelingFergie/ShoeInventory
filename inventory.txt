@@ -27,5 +27,4 @@ Scotland,ABCDE,Test Nike,99999.0,100
 Sweden,ABC123,Nike Flyers,149.0,12
 Norway,XYZ123,Nike Freerunners,456.0,14
 Denmark,FGH987,Nike Jumpboots,345.0,6
-
 France,SKU79999,Nike Roots,1890.0,45
